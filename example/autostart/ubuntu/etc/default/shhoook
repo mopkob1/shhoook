@@ -1,0 +1,18 @@
+# shhoook service configuration
+
+CONFIG_DIR="/etc/shhoook/conf"
+
+# Interface to wait for: tailscale0 / wg0 / tun0
+WAIT_IFACE="tun0"
+
+# Port to listen on
+PORT="8080"
+
+# Optional: pick exact IP on the interface
+# WAIT_IP="10.8.0.1"
+
+# Optional: pick first IPv4 matching prefix (useful if multiple IPs)
+WAIT_V4_PREFIX="10.8."
+
+# Max wait time (seconds)
+MAX_WAIT="60"

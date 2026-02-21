@@ -1,9 +1,0 @@
-CONFIG_DIR="/etc/shhoook/conf"
-WAIT_IFACE="tailscale0"
-PORT="8080"
-
-# if there are several IPv4 ports on the interface and you need to select a specific subnet:
-WAIT_V4_PREFIX="100.64."
-
-# or if you only need one IP address.:
-# WAIT_IP="100.64.0.10"

@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+
+name="shhoook"
+description="shhoook — impress the server (HTTP → shell hooks)"
+
+command="/usr/local/bin/shhoook-wrapper"
+command_background="yes"
+pidfile="/run/${RC_SVCNAME}.pid"
+command_args=""
+
+depend() {
+  need net
+  after firewall
+}
