@@ -1,0 +1,14 @@
+services:
+  gobuild:
+    build: .
+    environment:
+      OUTPUT: "shhoook"
+      MAIN: "."
+      HOST_UID: "${UID:-1000}"
+      HOST_GID: "${GID:-1000}"
+      SRC_DIR: "/src"
+      OUT_DIR: "/out"
+    volumes:
+      - ./src:/src:ro
+      - ./dist:/out
+    command: []

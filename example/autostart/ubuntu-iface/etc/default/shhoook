@@ -1,0 +1,16 @@
+# shhoook service configuration
+
+# Directory with endpoint configs (*.json)
+CONFIG_DIR="/etc/shhoook/conf"
+
+# Network interface to wait for (tailscale0 / wg0 / tun0)
+WAIT_IFACE="tailscale0"
+
+# Port to listen on
+PORT="8080"
+
+# Optional: wait for this exact IPv4 on the interface
+# WAIT_IP="100.64.0.10"
+
+# Optional: if the interface has multiple IPv4s, pick the first matching prefix
+WAIT_V4_PREFIX="100.64."

@@ -1,0 +1,18 @@
+{
+  "uri": "/vms/start/:name",
+  "method": "GET",
+  "query": {},
+  "body": {},
+  "auth": "X-Token:REPLACE_ME",
+  "ttl": "30s",
+  "error": 500,
+  "script": [
+    "curl",
+    "-s",
+    "-X",
+    "GET",
+    "-H",
+    "auth: REPLACE_ME2",
+    "http://192.168.1.1:8080/xen/start/{name}"
+  ]
+}

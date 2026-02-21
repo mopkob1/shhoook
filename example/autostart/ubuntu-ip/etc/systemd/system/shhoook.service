@@ -1,0 +1,28 @@
+[Unit]
+Description=shhoook minimal HTTP runner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=LISTEN_ADDR=10.8.0.1:8080
+Environment=CONFIG_DIR=/etc/shhoook/conf
+
+# We are waiting for the IP to appear, otherwise we will not start
+ExecStartPre=/bin/sh -lc 'ip="10.8.0.1"; for i in $(seq 1 30); do ip addr | grep -q " ${ip}/" && exit 0; sleep 1; done; exit 1'
+
+ExecStart=/usr/local/bin/shhoook
+Restart=on-failure
+RestartSec=2
+
+# A little bit of hard work
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/tmp
+AmbientCapabilities=
+CapabilityBoundingSet=
+
+[Install]
+WantedBy=multi-user.target

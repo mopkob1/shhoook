@@ -1,0 +1,13 @@
+{
+  "uri": "/start/stop/:name",
+  "method": "GET",
+  "query": {},
+  "body": {},
+  "auth": "X-Token:REPLACE_ME",
+  "ttl": "30s",
+  "error": 500,
+  "script": [
+    "/usr/local/bin/vmstop.sh",
+    "{name}"
+  ]
+}

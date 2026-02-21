@@ -1,0 +1,12 @@
+{
+  "uri": "/server/poweroff",
+  "method": "GET",
+  "query": {},
+  "body": {},
+  "auth": "X-Token:REPLACE_ME",
+  "ttl": "90s",
+  "error": 500,
+  "script": [
+    "/usr/local/bin/serverpoweroff.sh"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "uri": "/xen/start/:name",
+  "method": "GET",
+  "query": {},
+  "body": {},
+  "auth": "X-Token:REPLACE_ME",
+  "ttl": "30s",
+  "error": 500,
+  "script": [
+    "/usr/local/bin/vmstart.sh",
+    "{name}"
+  ]
+}

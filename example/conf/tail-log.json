@@ -1,0 +1,10 @@
+{
+"uri": "/run/tail/*rest",
+"method": "POST",
+"query": { "lines": "100" },
+"body": { "lines": "100" },
+  "auth": "X-Token:REPLACE_ME",
+"ttl": "8s",
+"error": 500,
+"script": ["/usr/bin/tail", "-n", "{lines}", "/var/log/{rest}"]
+}

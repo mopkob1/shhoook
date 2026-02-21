@@ -1,0 +1,10 @@
+{
+"uri": "/run/uptime",
+"method": "POST",
+"query": {},
+"body": {},
+"auth": "X-Token:REPLACE_ME",
+"ttl": "5s",
+"error": 500,
+"script": ["/usr/bin/uptime"]
+}

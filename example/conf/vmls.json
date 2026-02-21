@@ -1,0 +1,12 @@
+{
+  "uri": "/xen/vmls",
+  "method": "GET",
+  "query": {},
+  "body": {},
+  "auth": "X-Token:REPLACE_ME",
+  "ttl": "5s",
+  "error": 500,
+  "script": [
+    "/usr/local/bin/vmls.sh"
+  ]
+}
