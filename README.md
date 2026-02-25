@@ -17,6 +17,11 @@ It is suitable for micro-admin panels, orchestration of local operations, admin 
 
 ## Quick start
 
+### One script installation on Ubuntu
+```bash
+./install-ubuntu.sh --token <your-token>
+```
+
 ### Build using Docker Compose
 
 ```bash
