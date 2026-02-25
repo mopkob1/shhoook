@@ -1,5 +1,5 @@
 {
-  "uri": "/vms/start/:name",
+  "uri": "/deep/:name",
   "method": "GET",
   "query": {},
   "body": {},
@@ -7,12 +7,8 @@
   "ttl": "30s",
   "error": 500,
   "script": [
-    "curl",
-    "-s",
-    "-X",
-    "GET",
-    "-H",
-    "auth: REPLACE_ME2",
-    "http://192.168.1.1:8080/xen/start/{name}"
+    "/usr/local/bin/curl-check-body.sh",
+    "http://192.168.1.1:8080/xen/start/{name}",
+    "auth: REPLACE_ME2"
   ]
 }

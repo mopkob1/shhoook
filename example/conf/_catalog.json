@@ -1,0 +1,8 @@
+{
+  "uri": "/catalog",
+  "method": "GET",
+  "auth": "X-Token:REPLACE ME",
+  "ttl": "5s",
+  "error": 500,
+  "script": ["bash", "-lc", "/usr/local/bin/shhoook-catalog.sh"]
+}
